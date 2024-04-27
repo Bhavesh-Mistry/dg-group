@@ -1,0 +1,211 @@
+header {
+   &.navbar {
+      flex-direction: column;
+      background-color: transparent;
+      padding: 20px 0;
+      transition: all .3s;
+      z-index: 99;
+
+      &:hover {
+         background-color: $white;
+
+         .navbar-brand {
+            img {
+               content: url(../images/logo.png);
+            }
+         }
+
+         .navbar-nav {
+            .nav-item {
+               .nav-link {
+                  color: $clr-primary;
+               }
+            }
+         }
+
+         .navbar-toggler {
+            color: $clr-primary;
+         }
+      }
+
+      @media($portrait-phones) {
+         padding: 20px 0;
+      }
+
+      &.darkHeader {
+         background-color: $white;
+         top: 0;
+         left: 0;
+         right: 0;
+         box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.4);
+         padding: 10px 0;
+
+         @media($tablets) {
+            .navbar-collapse {
+               top: 60px;
+            }
+         }
+
+         @media($portrait-phones) {
+            padding: 15px 0;
+         }
+
+         .navbar-brand {
+            img {
+               content: url(../images/logo.png);
+               max-height: 40px;
+            }
+         }
+
+         .navbar-nav {
+            .nav-item {
+               .nav-link {
+                  color: $clr-primary;
+               }
+            }
+         }
+
+         .navbar-toggler {
+            color: $clr-primary;
+         }
+
+         .navbar-collapse {
+            @media($portrait-phones) {
+               top: 70px;
+            }
+         }
+      }
+
+
+      .navbar-brand {
+         margin: 0;
+         padding: 0;
+         transition: all .5s;
+
+         img {
+            transition: all .5s;
+         }
+      }
+
+      .navbar-toggler {
+         padding: 0;
+         position: relative;
+         color: $white;
+         line-height: 1;
+         margin-left: auto;
+
+         &:focus {
+            box-shadow: none;
+         }
+      }
+
+      .navbar-nav {
+         .nav-item {
+            margin: 0 20px;
+            overflow: hidden;
+
+            &:last-child {
+               margin-right: 0;
+            }
+
+            .nav-link {
+               font-size: 14px;
+               letter-spacing: 1px;
+               padding-left: 0;
+               padding-right: 0;
+               font-weight: 600;
+               color: $white;
+               position: relative;
+               transition: all 0.35s ease;
+
+               &:before {
+                  position: absolute;
+                  -webkit-transition: all 0.35s ease;
+                  transition: all 0.35s ease;
+                  bottom: 100%;
+                  display: block;
+                  height: 3px;
+                  left: 0;
+                  width: 100%;
+                  content: "";
+                  background-color: $clr-light-green;
+
+                  @media ($tablets) {
+                     display: none;
+                  }
+               }
+
+               &:after {
+                  position: absolute;
+                  -webkit-transition: all 0.35s ease;
+                  transition: all 0.35s ease;
+                  padding: .5rem 0;
+                  letter-spacing: 1px;
+                  position: absolute;
+                  bottom: 100%;
+                  left: 0;
+                  content: attr(data-hover);
+                  color: $clr-light-green;
+                  white-space: nowrap;
+
+                  @media ($tablets) {
+                     display: none;
+                  }
+               }
+
+               &:hover,
+               &.active {
+                  color: $clr-light-green;
+                  transform: translateY(100%);
+
+                  @media ($tablets) {
+                     transform: inherit;
+                  }
+               }
+            }
+         }
+      }
+
+      .navbar-collapse {
+         transition: all .3s;
+
+         @media($tablets) {
+            position: absolute;
+            top: 85px;
+            left: 0;
+            right: 0;
+            background-color: $clr-secondary;
+            border-top: 3px solid $clr-primary;
+            z-index: 99;
+
+            .navbar-nav {
+               margin: 0;
+
+               .nav-item {
+                  margin: 0 0px;
+
+                  .nav-link {
+                     padding: 15px 35px;
+                     border-bottom: 1px solid $white;
+                     color: $white;
+
+                     @media($portrait-phones) {
+                        padding: 15px;
+                     }
+
+                     &:hover,
+                     &.active {
+                        background-color: $clr-primary;
+                        color: $white;
+                     }
+                  }
+               }
+            }
+         }
+
+         @media($portrait-phones) {
+            top: 85px;
+         }
+      }
+   }
+}

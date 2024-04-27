@@ -1,0 +1,182 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  &:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  &:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Titillium Web", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1;
+  overflow-x: hidden;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Titillium Web", sans-serif;
+  }
+
+  p,
+  span {
+    font-family: "Titillium Web", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+  }
+
+  a {
+    font-family: "Titillium Web", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    &.active {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  ul,
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: "Titillium Web", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .s-title {
+    color: #22b78e;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 31px;
+    margin: 0 0 0px;
+    letter-spacing: 1.28px;
+    line-height: 44px;
+    text-align: left;
+
+    @media ($tablets) {
+      font-size: 28px;
+      line-height: 40px;
+    }
+
+    @media ($portrait-phones) {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+
+}
+
+
+#page-preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba($black, .9);
+  z-index: 777;
+
+  .spinner {
+    background: url(../images/preloader-wrap.png) no-repeat;
+    width: 120px;
+    height: 90px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background: url(../images/preloader-spinner.png) no-repeat;
+      top: 25px;
+      right: 23px;
+      -webkit-animation: rotating 1.5s linear infinite;
+      -moz-animation: rotating 1.5s linear infinite;
+      -ms-animation: rotating 1.5s linear infinite;
+      -o-animation: rotating 1.5s linear infinite;
+      animation: rotating 1.5s linear infinite;
+    }
+  }
+
+  .centered-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    margin: 0;
+    z-index: 1;
+  }
+
+  @-webkit-keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+}

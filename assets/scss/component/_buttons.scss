@@ -1,0 +1,61 @@
+// @import "fonts";
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3.2px;
+  min-width: 186px;
+  min-height: 45px;
+  color: $white;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 15px;
+  line-height: 18px;
+  border: 0;
+  font-family: "Titillium Web", sans-serif;
+  transition: 0.3s all;
+
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+  }
+
+
+
+
+
+  &.btn-blue {
+    background-color: $clr-light-green;
+    color: $white;
+
+    &:hover {
+      background-color: $clr-primary;
+      color: $white;
+    }
+  }
+
+  &.btn-dark-blue {
+    background-color: $clr-primary;
+    color: $white;
+
+    &:hover {
+      background-color: $clr-light-green;
+      color: $white;
+    }
+  }
+
+  &.btn-outline-white {
+    background-color: transparent;
+    color: $clr-primary;
+    border: 2px solid $clr-light-green;
+
+    &:hover {
+      background-color: $clr-primary;
+      color: $clr-light-green;
+      border-color: $clr-primary;
+    }
+  }
+
+
+}
